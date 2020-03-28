@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Baxi/Desktop/Proyect-in-C/Proyect1/main.c
+ctype.h
+-
+stdio.h
+-
+unistd.h
+-
+limits.h
+-
+string.h
+-
+regex.h
+-
+

@@ -1,0 +1,8 @@
+Nombre			Apellidos		Email					Teléfono	
+José Enrique	Araya Monge		jaraya@tec.ac.cr		25502448
+Fabián 			Araya Mora		faaraya@tec.ac.cr		25502110
+Fabián			Araya Mora		fabian.araya@tec.ac.cr	+50625502398
+José Andrés		Araya Obando	jobando@tec.ac.cr		2550-2311
+Alejandra		Araya Pérez		alaraya@tec.ac.cr		+506 25502558
+Oscar			Viquez Acuña	oviquez@tec.ac.cr		83-31-44-45
+Pedro 			Pérez Ramírez	pperez@tec.ac.cr		+5067205-2357

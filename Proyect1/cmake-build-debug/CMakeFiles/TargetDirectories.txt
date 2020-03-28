@@ -1,0 +1,3 @@
+C:/Users/Baxi/Desktop/Proyect-in-C/Proyect1/cmake-build-debug/CMakeFiles/Proyect1.dir
+C:/Users/Baxi/Desktop/Proyect-in-C/Proyect1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Baxi/Desktop/Proyect-in-C/Proyect1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
