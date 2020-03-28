@@ -10,8 +10,7 @@
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-int match(const char *string, const char *pattern)
-{
+int match(const char *string, const char *pattern){
     regex_t re;
     if (regcomp(&re, pattern, REG_EXTENDED|REG_NOSUB) != 0){
         return 0;
@@ -28,7 +27,7 @@ int match(const char *string, const char *pattern)
 /*--------------------------------------------------------------------------------------------------------------------*/
 int getNumber(char string[MAXCHAR]){
 
-    char arr[strlen(string)];
+    char arr[11];
     int cont =0;
 
     /*For in every char*/
@@ -38,10 +37,11 @@ int getNumber(char string[MAXCHAR]){
             cont++;
         }
     }
-    /*if isn't numbers in string*/
-    if(cont == 0){
+    /*if are less of 8 numbers in string, int's phone number*/
+    if(cont < 8 ){
         return 1;
     }
+
     printf("\n------------------------------------------------------------");
     printf("\nPhone Number:");
     /*Loop to print phone numbers the information*/
