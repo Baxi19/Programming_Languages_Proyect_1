@@ -8,7 +8,7 @@
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 #define MAXCHAR 10000
-void displayString(char str[]);
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*Companies Structs*/
 struct nodeHouse {
@@ -16,35 +16,35 @@ struct nodeHouse {
     struct nodeHouse *next;
 };
 struct nodeHouse *head_h = NULL;
-struct nodeHouse *current_h = NULL;
+//struct nodeHouse *current_h = NULL;
 
 struct nodeFullmovil {
     char num[11];
     struct nodeFullmovil *next;
 };
 struct nodeFullmovil *head_f = NULL;
-struct nodeFullmovil *current_f = NULL;
+//struct nodeFullmovil *current_f = NULL;
 
 struct nodeMovistar {
     char num[11];
     struct nodeMovistar *next;
 };
 struct nodeMovistar *head_m = NULL;
-struct nodeMovistar *current_m = NULL;
+//struct nodeMovistar *current_m = NULL;
 
 struct nodeClaro {
     char num[11];
     struct nodeClaro *next;
 };
 struct nodeClaro *head_c = NULL;
-struct nodeClaro *current_c = NULL;
+//struct nodeClaro *current_c = NULL;
 
 struct nodeKolbi {
     char num[11];
     struct nodeKolbi *next;
 };
 struct nodeKolbi *head_k = NULL;
-struct nodeKolbi *current_k = NULL;
+//struct nodeKolbi *current_k = NULL;
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -53,6 +53,7 @@ void insertFirstHouse(char number[] , int size) {
     //create a link
     struct nodeHouse *link = (struct nodeHouse*) malloc(sizeof(1));
 
+    /*Make an international number*/
     if(size == 8){
         link->num[0] = '5';
         link->num[1] = '0';
@@ -65,27 +66,169 @@ void insertFirstHouse(char number[] , int size) {
             link->num[i] = number[i];
         }
     }
-    //for (int i = 0; i < size; ++i) {
-      //  link->num[i] = number[i];
-    //}
-    //link->num == &number;
 
     //point it to old first node
     link->next = head_h;
-
     //point first to new first node
     head_h = link;
 }
-
 /*--------------------------------------------------------------------------------------------------------------------*/
-/*Methods to display the list*/
+/*Methods to insert link at the first location in Fullmovil */
+void insertFirstFullmovil(char number[] , int size) {
+    //create a link
+    struct nodeFullmovil *link = (struct nodeFullmovil*) malloc(sizeof(1));
+
+    /*Make an international number*/
+    if(size == 8){
+        link->num[0] = '5';
+        link->num[1] = '0';
+        link->num[2] = '6';
+        for (int i = 0; i < size; ++i) {
+            link->num[i+3] = number[i];
+        }
+    }else{
+        for (int i = 0; i < size; ++i) {
+            link->num[i] = number[i];
+        }
+    }
+
+    //point it to old first node
+    link->next = head_f;
+    //point first to new first node
+    head_f = link;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Methods to insert link at the first location in Movistar */
+void insertFirstMovistar(char number[] , int size) {
+    //create a link
+    struct nodeMovistar *link = (struct nodeMovistar*) malloc(sizeof(1));
+
+    /*Make an international number*/
+    if(size == 8){
+        link->num[0] = '5';
+        link->num[1] = '0';
+        link->num[2] = '6';
+        for (int i = 0; i < size; ++i) {
+            link->num[i+3] = number[i];
+        }
+    }else{
+        for (int i = 0; i < size; ++i) {
+            link->num[i] = number[i];
+        }
+    }
+
+    //point it to old first node
+    link->next = head_m;
+    //point first to new first node
+    head_m = link;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Methods to insert link at the first location in Claro */
+void insertFirstClaro(char number[] , int size) {
+    //create a link
+    struct nodeClaro *link = (struct nodeClaro*) malloc(sizeof(1));
+
+    /*Make an international number*/
+    if(size == 8){
+        link->num[0] = '5';
+        link->num[1] = '0';
+        link->num[2] = '6';
+        for (int i = 0; i < size; ++i) {
+            link->num[i+3] = number[i];
+        }
+    }else{
+        for (int i = 0; i < size; ++i) {
+            link->num[i] = number[i];
+        }
+    }
+
+    //point it to old first node
+    link->next = head_c;
+    //point first to new first node
+    head_c = link;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Methods to insert link at the first location in Kolbi */
+void insertFirstKolbi(char number[] , int size) {
+    //create a link
+    struct nodeKolbi *link = (struct nodeKolbi*) malloc(sizeof(1));
+
+    /*Make an international number*/
+    if(size == 8){
+        link->num[0] = '5';
+        link->num[1] = '0';
+        link->num[2] = '6';
+        for (int i = 0; i < size; ++i) {
+            link->num[i+3] = number[i];
+        }
+    }else{
+        for (int i = 0; i < size; ++i) {
+            link->num[i] = number[i];
+        }
+    }
+
+    //point it to old first node
+    link->next = head_k;
+    //point first to new first node
+    head_k = link;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Methods to display the houses list phone numbers*/
 void printListHouse() {
     struct nodeHouse *ptr = head_h;
     printf("\n******************************************");
-    printf("\nNumeros Fijos:");
+    printf("\nNumeros Fijos (Recidenciales):");
     //start from the beginning
     while(ptr != NULL) {
-        printf("\n%s", ptr->num);
+        printf("\n=>%s", ptr->num);
+        ptr = ptr->next;
+    }
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Methods to display the fullmovil list phone numbers*/
+void printListFullMovil() {
+    struct nodeFullmovil *ptr = head_f;
+    printf("\n******************************************");
+    printf("\nNumeros Fullmovil:");
+    //start from the beginning
+    while(ptr != NULL) {
+        printf("\n=>%s", ptr->num);
+        ptr = ptr->next;
+    }
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Methods to display the movistar list phone numbers*/
+void printListMovistar() {
+    struct nodeMovistar *ptr = head_m;
+    printf("\n******************************************");
+    printf("\nNumeros Movistar:");
+    //start from the beginning
+    while(ptr != NULL) {
+        printf("\n=>%s", ptr->num);
+        ptr = ptr->next;
+    }
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Methods to display the claro list phone numbers*/
+void printListClaro() {
+    struct nodeClaro *ptr = head_c;
+    printf("\n******************************************");
+    printf("\nNumeros Claro:");
+    //start from the beginning
+    while(ptr != NULL) {
+        printf("\n=>%s", ptr->num);
+        ptr = ptr->next;
+    }
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Methods to display the kolbi list phone numbers*/
+void printListKolbi() {
+    struct nodeKolbi *ptr = head_k;
+    printf("\n******************************************");
+    printf("\nNumeros Kolbi:");
+    //start from the beginning
+    while(ptr != NULL) {
+        printf("\n=>%s", ptr->num);
         ptr = ptr->next;
     }
 }
@@ -123,20 +266,20 @@ int getNumber(char string[MAXCHAR]){
         return 1;
     }
 
-    printf("\n------------------------------------------------------------");
-    printf("\nNumero De Telefono:");
+    //printf("\n------------------------------------------------------------");
+    //printf("\nNumero De Telefono:");
 
     /*Loop to print phone numbers the information*/
-    for (int j = 0; j < cont; ++j) {
-        printf("[%c]", arr[j]);
-    }
+   // for (int j = 0; j < cont; ++j) {
+     //   printf("[%c]", arr[j]);
+    //}
 
     /*check the type*/
     const char* tel = "506[0-9]{8}";
 
     /*if the number had 506?*/
     if(match(arr, tel) == 1){
-        printf("\t\t\n=>Telefono Con 506");
+        //printf("\t\t\n=>Telefono Con 506");
 
         const char* house = "5062[0-9]{7}";
         const char* fullmovil = "5065[0-9]{7}";
@@ -145,27 +288,31 @@ int getNumber(char string[MAXCHAR]){
         const char* kolbi = "5068[0-9]{7}";
 
         if(match(arr, house) == 1){
-            printf("\t\t\n=>Telefono Fijo Encontrado");
+            //printf("\t\t\n=>Telefono Fijo Encontrado");
             insertFirstHouse(arr, 11);
         }
         else if(match(arr, movistar) == 1){
-            printf("\t\t\n=>Telefono Movistar Encontrado");
+            //printf("\t\t\n=>Telefono Movistar Encontrado");
+            insertFirstMovistar(arr, 11);
         }
         else if(match(arr, kolbi) == 1){
-            printf("\t\t\n=>Telefono Kolbi Encontrado");
+            //printf("\t\t\n=>Telefono Kolbi Encontrado");
+            insertFirstKolbi(arr, 11);
         }
         else if(match(arr, claro) == 1){
-            printf("\t\t\n=>Telefono Claro Encontrado");
+            //printf("\t\t\n=>Telefono Claro Encontrado");
+            insertFirstClaro(arr, 11);
         }
         else if(match(arr, fullmovil) == 1){
-            printf("\t\t\n=>Telefono Fullmovil Encontrado");
+            //printf("\t\t\n=>Telefono Fullmovil Encontrado");
+            insertFirstFullmovil(arr, 11);
         }
         else{
             printf("\t\t\n=>Telefono No Identificado");
         }
 
     }else{
-        printf("\t\t\n=>Telefono Sin 506");
+       // printf("\t\t\n=>Telefono Sin 506");
 
         const char* house = "2[0-9]{7}";
         const char* fullmovil = "5[0-9]{7}";
@@ -174,20 +321,24 @@ int getNumber(char string[MAXCHAR]){
         const char* kolbi = "8[0-9]{7}";
 
         if(match(arr, house) == 1){
-            printf("\t\t\n=>Telefono Fijo Encontrado");
+            //printf("\t\t\n=>Telefono Fijo Encontrado");
             insertFirstHouse(arr, 8);
         }
         else if(match(arr, movistar) == 1){
-            printf("\t\t\n=>Telefono Movistar Encontrado");
+            //printf("\t\t\n=>Telefono Movistar Encontrado");
+            insertFirstMovistar(arr, 8);
         }
         else if(match(arr, kolbi) == 1){
-            printf("\t\t\n=>Telefono Kolbi Encontrado");
+            //printf("\t\t\n=>Telefono Kolbi Encontrado");
+            insertFirstKolbi(arr, 8);
         }
         else if(match(arr, claro) == 1){
-            printf("\t\t\n=>Telefono Claro Encontrado");
+            //printf("\t\t\n=>Telefono Claro Encontrado");
+            insertFirstClaro(arr, 8);
         }
         else if(match(arr, fullmovil) == 1){
-            printf("\t\t\n=>Telefono Fullmovil Encontrado");
+            //printf("\t\t\n=>Telefono Fullmovil Encontrado");
+            insertFirstFullmovil(arr, 8);
         }
         else{
             printf("\t\t\n=>Telefono No Identificado");
@@ -210,9 +361,9 @@ int main() {
     if (getcwd(cwd, sizeof(cwd)) != NULL) {
         strcpy(path, cwd);
         strcat(path, "\\archivo.txt");
-        printf("La ubicacion del archivo es: %s\n", path);
+        printf("\n\nLa ubicacion del archivo de texto es: %s\n", path);
     } else {
-        perror("Error al ubicar del archivo");
+        perror("\n\nError al ubicar del archivo");
         return 1;
     }
     /*----------------------------------------------------------------------------------------------------------------*/
@@ -223,7 +374,7 @@ int main() {
     /*open in read mode*/
     fp = fopen(filename, "r");
     if (fp == NULL){
-        printf("No se pudo abrir el archivo %s",filename);
+        printf("\n\nNo se pudo abrir el archivo %s",filename);
         return 1;
     }
     /*----------------------------------------------------------------------------------------------------------------*/
@@ -233,12 +384,15 @@ int main() {
     }
     fclose(fp);
     /*----------------------------------------------------------------------------------------------------------------*/
+    printf("\n******************************************");
+    printf("\n******MOSTRANDO DATOS DE LAS LISTAS*******");
     printListHouse();
+    printListFullMovil();
+    printListMovistar();
+    printListClaro();
+    printListKolbi();
+    printf("\n******************************************");
     return 0;
     /*----------------------------------------------------------------------------------------------------------------*/
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
-void displayString(char str[]){
-
-
-}
