@@ -1,3 +1,4 @@
+/*--------------------------------------------------------------------------------------------------------------------*/
 #include <ctype.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -5,7 +6,10 @@
 #include <string.h>
 #include <regex.h>
 #include <stdlib.h>
-
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Randald Villegas Brenes*/
+/*Proyecto #1 de lenguajes de programacion*/
+/*Lenguaje imperativo*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 #define MAXCHAR 10000
 
@@ -16,35 +20,30 @@ struct nodeHouse {
     struct nodeHouse *next;
 };
 struct nodeHouse *head_h = NULL;
-//struct nodeHouse *current_h = NULL;
 
 struct nodeFullmovil {
     char num[11];
     struct nodeFullmovil *next;
 };
 struct nodeFullmovil *head_f = NULL;
-//struct nodeFullmovil *current_f = NULL;
 
 struct nodeMovistar {
     char num[11];
     struct nodeMovistar *next;
 };
 struct nodeMovistar *head_m = NULL;
-//struct nodeMovistar *current_m = NULL;
 
 struct nodeClaro {
     char num[11];
     struct nodeClaro *next;
 };
 struct nodeClaro *head_c = NULL;
-//struct nodeClaro *current_c = NULL;
 
 struct nodeKolbi {
     char num[11];
     struct nodeKolbi *next;
 };
 struct nodeKolbi *head_k = NULL;
-//struct nodeKolbi *current_k = NULL;
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -266,21 +265,11 @@ int getNumber(char string[MAXCHAR]){
         return 1;
     }
 
-    //printf("\n------------------------------------------------------------");
-    //printf("\nNumero De Telefono:");
-
-    /*Loop to print phone numbers the information*/
-   // for (int j = 0; j < cont; ++j) {
-     //   printf("[%c]", arr[j]);
-    //}
-
     /*check the type*/
     const char* tel = "506[0-9]{8}";
 
     /*if the number had 506?*/
     if(match(arr, tel) == 1){
-        //printf("\t\t\n=>Telefono Con 506");
-
         const char* house = "5062[0-9]{7}";
         const char* fullmovil = "5065[0-9]{7}";
         const char* movistar = "5066[0-9]{7}";
@@ -312,8 +301,6 @@ int getNumber(char string[MAXCHAR]){
         }
 
     }else{
-       // printf("\t\t\n=>Telefono Sin 506");
-
         const char* house = "2[0-9]{7}";
         const char* fullmovil = "5[0-9]{7}";
         const char* movistar = "6[0-9]{7}";
@@ -321,31 +308,24 @@ int getNumber(char string[MAXCHAR]){
         const char* kolbi = "8[0-9]{7}";
 
         if(match(arr, house) == 1){
-            //printf("\t\t\n=>Telefono Fijo Encontrado");
             insertFirstHouse(arr, 8);
         }
         else if(match(arr, movistar) == 1){
-            //printf("\t\t\n=>Telefono Movistar Encontrado");
             insertFirstMovistar(arr, 8);
         }
         else if(match(arr, kolbi) == 1){
-            //printf("\t\t\n=>Telefono Kolbi Encontrado");
             insertFirstKolbi(arr, 8);
         }
         else if(match(arr, claro) == 1){
-            //printf("\t\t\n=>Telefono Claro Encontrado");
             insertFirstClaro(arr, 8);
         }
         else if(match(arr, fullmovil) == 1){
-            //printf("\t\t\n=>Telefono Fullmovil Encontrado");
             insertFirstFullmovil(arr, 8);
         }
         else{
             printf("\t\t\n=>Telefono No Identificado");
         }
-
     }
-
     return 1;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
