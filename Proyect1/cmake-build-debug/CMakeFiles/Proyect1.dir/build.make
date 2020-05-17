@@ -56,27 +56,27 @@ include CMakeFiles/Proyect1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Proyect1.dir/flags.make
 
-CMakeFiles/Proyect1.dir/main.c.obj: CMakeFiles/Proyect1.dir/flags.make
-CMakeFiles/Proyect1.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Baxi\Desktop\Programming_Languages_Proyect_1\Proyect1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Proyect1.dir/main.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Proyect1.dir\main.c.obj   -c C:\Users\Baxi\Desktop\Programming_Languages_Proyect_1\Proyect1\main.c
+CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.obj: CMakeFiles/Proyect1.dir/flags.make
+CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.obj: C:/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Baxi\Desktop\Programming_Languages_Proyect_1\Proyect1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Proyect1.dir\C_\Users\Baxi\Desktop\Programming_Languages_Proyect_1\dev\src\main.c.obj   -c C:\Users\Baxi\Desktop\Programming_Languages_Proyect_1\dev\src\main.c
 
-CMakeFiles/Proyect1.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Proyect1.dir/main.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Baxi\Desktop\Programming_Languages_Proyect_1\Proyect1\main.c > CMakeFiles\Proyect1.dir\main.c.i
+CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Baxi\Desktop\Programming_Languages_Proyect_1\dev\src\main.c > CMakeFiles\Proyect1.dir\C_\Users\Baxi\Desktop\Programming_Languages_Proyect_1\dev\src\main.c.i
 
-CMakeFiles/Proyect1.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Proyect1.dir/main.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Baxi\Desktop\Programming_Languages_Proyect_1\Proyect1\main.c -o CMakeFiles\Proyect1.dir\main.c.s
+CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Baxi\Desktop\Programming_Languages_Proyect_1\dev\src\main.c -o CMakeFiles\Proyect1.dir\C_\Users\Baxi\Desktop\Programming_Languages_Proyect_1\dev\src\main.c.s
 
 # Object files for target Proyect1
 Proyect1_OBJECTS = \
-"CMakeFiles/Proyect1.dir/main.c.obj"
+"CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.obj"
 
 # External object files for target Proyect1
 Proyect1_EXTERNAL_OBJECTS =
 
-Proyect1.exe: CMakeFiles/Proyect1.dir/main.c.obj
+Proyect1.exe: CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.obj
 Proyect1.exe: CMakeFiles/Proyect1.dir/build.make
 Proyect1.exe: C:/msys64/mingw64/lib/libsystre.dll.a
 Proyect1.exe: CMakeFiles/Proyect1.dir/linklibs.rsp

@@ -76,7 +76,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Baxi/Desktop/Programming_Languages_Proyect_1/Proyect1/main.c">
+		<Unit filename="C:/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c">
 			<Option target="Proyect1"/>
 		</Unit>
 		<Unit filename="C:/Users/Baxi/Desktop/Programming_Languages_Proyect_1/Proyect1/CMakeLists.txt">

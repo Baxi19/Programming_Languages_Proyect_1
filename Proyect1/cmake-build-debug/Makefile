@@ -122,32 +122,32 @@ Proyect1/fast:
 	$(MAKE) -f CMakeFiles\Proyect1.dir\build.make CMakeFiles/Proyect1.dir/build
 .PHONY : Proyect1/fast
 
-main.obj: main.c.obj
+C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.obj: C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.obj
 
-.PHONY : main.obj
+.PHONY : C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) -f CMakeFiles\Proyect1.dir\build.make CMakeFiles/Proyect1.dir/main.c.obj
-.PHONY : main.c.obj
+C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.obj:
+	$(MAKE) -f CMakeFiles\Proyect1.dir\build.make CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.obj
+.PHONY : C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.obj
 
-main.i: main.c.i
+C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.i: C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.i
 
-.PHONY : main.i
+.PHONY : C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles\Proyect1.dir\build.make CMakeFiles/Proyect1.dir/main.c.i
-.PHONY : main.c.i
+C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.i:
+	$(MAKE) -f CMakeFiles\Proyect1.dir\build.make CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.i
+.PHONY : C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.i
 
-main.s: main.c.s
+C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.s: C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.s
 
-.PHONY : main.s
+.PHONY : C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles\Proyect1.dir\build.make CMakeFiles/Proyect1.dir/main.c.s
-.PHONY : main.c.s
+C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.s:
+	$(MAKE) -f CMakeFiles\Proyect1.dir\build.make CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.s
+.PHONY : C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... Proyect1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.obj
+	@echo ... C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.i
+	@echo ... C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.s
 .PHONY : help
 
 
