@@ -107,6 +107,7 @@ void getNumber(char string[MAXCHAR]){
         const char* kolbi = "5068[0-9]{7}";
 
         if(match(array, house) == 1){
+            printf("\nCASA ENCONTRADA.........................");
             insertNode(array, 11, RESIDENCIALES);
         }
         else if(match(array, movistar) == 1){
@@ -199,7 +200,6 @@ void loadArchive(int opcion){
     /*----------------------------------------------------------------------------------------------------------------*/
     /*loop to read line by line in File*/
     while (fgets(str, MAXCHAR, fp) != NULL){
-        printf("->%s", str );
         getNumber(str);
     }
     fclose(fp);
