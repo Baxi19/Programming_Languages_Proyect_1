@@ -44,7 +44,6 @@ void insertNode(char *number, int size, Type type) {
             node->num[i] = number[i];
         }
     }
-
     //point it to old first node
     node->next = head;
     //point first to new first node
@@ -171,9 +170,9 @@ void loadArchive(int opcion){
     char cwd[PATH_MAX];
     char archiveName[15];
     if(opcion == 1){
-        strcpy(archiveName, "\\archivo.txt");
+        strcpy(archiveName, "/archivo.txt");
     }else{
-        strcpy(archiveName, "\\archivo2.txt");
+        strcpy(archiveName, "/archivo2.txt");
     }
     /*----------------------------------------------------------------------------------------------------------------*/
     /*Check if is possible to get the proyect path*/

@@ -1,8 +1,8 @@
 descriptor-schema-version: "2.2"
 
 info:
-  name: SampleNodeApp
-  description: "Simple Docker Style C Application"
+  name: Proyect 1
+  description: "Docker Style C Application"
   version: "1.0"
 
 
