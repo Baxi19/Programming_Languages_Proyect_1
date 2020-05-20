@@ -199,6 +199,7 @@ void loadArchive(int opcion){
     /*----------------------------------------------------------------------------------------------------------------*/
     /*loop to read line by line in File*/
     while (fgets(str, MAXCHAR, fp) != NULL){
+        printf("->%s", str );
         getNumber(str);
     }
     fclose(fp);
