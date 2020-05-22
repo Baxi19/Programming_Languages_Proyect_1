@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Proyect1.dir/C_/Users/Baxi/Desktop/Programming_Languages_Proyect_1/dev/src/main.c.obj"
+  "CMakeFiles/Proyect1.dir/main.c.obj"
   "Proyect1.exe"
   "Proyect1.exe.manifest"
   "Proyect1.pdb"
