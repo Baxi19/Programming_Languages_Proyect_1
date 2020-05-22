@@ -157,11 +157,11 @@ void showInfo(){
     /*----------------------------------------------------------------------------------------------------------------*/
     printf("\n******************************************");
     printf("\n******MOSTRANDO DATOS DE LA LISTA*********");
-    printList(RESIDENCIALES, "RESIDENCIALES");
-    printList(FULLMOVIL, "FULLMOVIL");
-    printList(MOVISTAR,"MOVISTAR");
-    printList(CLARO, "CLARO");
-    printList(KOLBI, "KOLBI");
+    printList(RESIDENCIALES, "Residenciales");
+    printList(FULLMOVIL, "Fullmovil");
+    printList(MOVISTAR,"Movistar");
+    printList(CLARO, "Claro");
+    printList(KOLBI, "Kolbi");
     printf("\n******************************************");
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
