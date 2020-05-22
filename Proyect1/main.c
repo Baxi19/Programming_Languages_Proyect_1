@@ -52,7 +52,7 @@ void insertNode(char *number, int size, Type type) {
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*Methods to display the list phone numbers*/
-void printList(Type type, char *str) {
+void printList(Type type, char str[]) {
     struct node *ptr = head;
     printf("\n******************************************");
     printf("\nNumeros de %s", str);
@@ -157,11 +157,11 @@ void showInfo(){
     /*----------------------------------------------------------------------------------------------------------------*/
     printf("\n******************************************");
     printf("\n******MOSTRANDO DATOS DE LA LISTA*********");
-    char * residenciales = "Residenciales";
-    char * fullmovil = "Fullmovil";
-    char * movistar = "Movistar";
-    char * claro = "Claro";
-    char * kolbi = "Kolbi";
+    char residenciales[] = "Residenciales";
+    char  fullmovil[] = "Fullmovil";
+    char  movistar[] = "Movistar";
+    char  claro[] = "Claro";
+    char  kolbi[] = "Kolbi";
 
     printList(RESIDENCIALES, residenciales);
     printList(FULLMOVIL, fullmovil);
