@@ -59,7 +59,7 @@ void printList(Type type, char str[]) {
     //start from the beginning
     while(ptr != NULL) {
         if(ptr->type == type){
-            printf("\n=>%s", ptr->num);
+            printf("\n=> %s", ptr->num);
         }
         ptr = ptr->next;
     }
@@ -174,20 +174,30 @@ void showInfo(){
 void loadArchive(int opcion){
     char path[MAXCHAR];
     char cwd[PATH_MAX];
-    char archiveName[15];
+    char archiveName[50];
+
     if(opcion == 1){
-        strcpy(archiveName, "/archivo.txt");
-    }else{
-        strcpy(archiveName, "/archivo2.txt");
+        strcpy(archiveName, "\\archivo.txt");
+    }else if(opcion == 2){
+        char name[50];
+        strcpy(archiveName, "\\");
+        printf( "\nDigite el nombre del archivo: ");
+        fflush(stdin);
+        scanf( "%s", name );
+        fflush(stdin);
+
+        strcat(archiveName, name);
+        strcat(archiveName, ".txt");
+
     }
     /*----------------------------------------------------------------------------------------------------------------*/
     /*Check if is possible to get the proyect path*/
     if (getcwd(cwd, sizeof(cwd)) != NULL) {
         strcpy(path, cwd);
         strcat(path, archiveName);
-        printf("\n->La ubicacion del archivo de texto es: %s\n", path);
+        printf("\n-> La ubicacion del archivo de texto es: %s\n", path);
     } else {
-        perror("\n->Error al ubicar del archivo");
+        perror("\n-> Error al ubicar del archivo");
         return ;
     }
     /*----------------------------------------------------------------------------------------------------------------*/
@@ -198,9 +208,10 @@ void loadArchive(int opcion){
     /*open in read mode*/
     fp = fopen(filename, "r");
     if (fp == NULL){
-        printf("\n\n->No se pudo abrir el archivo %s",filename);
+        printf("\n\n-> No se pudo abrir el archivo %s",filename);
         return ;
     }
+
     head = NULL;
     /*----------------------------------------------------------------------------------------------------------------*/
     /*loop to read line by line in File*/
@@ -216,24 +227,28 @@ int main() {
     /*----------------------------------------------------------------------------------------------------------------*/
     /*Menu*/
     int  opcion;
+    int count = 0;
     do{
         printf("\n\n*********************************************************************************");
-        printf( "\n   1. Clasificar numeros del archivo 1");
-        printf( "\n   2. Clasificar numeros del archivo 2");
+        printf( "\n   1. Clasificar numeros del archivo de prueba");
+        printf( "\n   2. Clasificar numeros del archivo  agregado previamente");
         printf( "\n   3. Salir." );
-        printf( "\n\n   Introduzca opci%cn (1-3): ", 162 );
+        printf( "\n\n   Introduzca opcion (1-3): ");
+        fflush(stdin);
         scanf( "%d", &opcion );
         printf("\n*********************************************************************************");
         switch ( opcion ){
             case 1:
+                count ++;
                 loadArchive(opcion);
                 break;
             case 2:
+                count ++;
                 loadArchive(opcion);
                 break;
         }
-    } while ( opcion != 3 );
-    printf("\nGracias por utilizar el programa!");
+    } while ( opcion != 3 && count != 2);
+    printf("\nGracias por utilizar el programa!\n");
     /*----------------------------------------------------------------------------------------------------------------*/
     return 0;
 }

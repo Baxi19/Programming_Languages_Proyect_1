@@ -1,5 +1,5 @@
-FROM devhub-docker.cisco.com/iox-docker/ir800/base-rootfs
-
+FROM ubuntu:latest
+MAINTAINER Randald_Villegas randald1991@gmail.com
 COPY Proyect1 /opt/apps/
-RUN opkg update
+RUN apt-get update
 CMD ["/opt/Proyect1/main"]
