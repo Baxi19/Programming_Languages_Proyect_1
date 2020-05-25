@@ -6,6 +6,8 @@
 #include <string.h>
 #include <regex.h>
 #include <stdlib.h>
+#define MAXCHAR 10000
+
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*Randald Villegas Brenes*/
@@ -13,8 +15,8 @@
 /*Lenguaje Imperativo*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-#define MAXCHAR 10000
-typedef enum { RESIDENCIALES, FULLMOVIL, MOVISTAR, CLARO, KOLBI } Type; /*['(506)2...','(506)5...','(506)6...','(506)7...','(506)8...']*/
+/*['(506)2...','(506)5...','(506)6...','(506)7...','(506)8...']*/
+typedef enum { RESIDENCIALES, FULLMOVIL, MOVISTAR, CLARO, KOLBI } Type;
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*Structs*/
@@ -177,10 +179,10 @@ void loadArchive(int opcion){
     char archiveName[50];
 
     if(opcion == 1){
-        strcpy(archiveName, "\\archivo.txt");
+        strcpy(archiveName, "/archivo.txt");
     }else if(opcion == 2){
         char name[50];
-        strcpy(archiveName, "\\");
+        strcpy(archiveName, "/");
         printf( "\nDigite el nombre del archivo: ");
         fflush(stdin);
         scanf( "%s", name );
