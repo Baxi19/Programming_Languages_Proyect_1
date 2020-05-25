@@ -1,7 +1,7 @@
 descriptor-schema-version: "2.2"
 
 info:
-  name: Proyecto-Lenguajes
+  name: proyecto-lenguajes
   description: "Docker Style C Application"
   version: "1.0"
   author-link: "https://github.com/Baxi19"
